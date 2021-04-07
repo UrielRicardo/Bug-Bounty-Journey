@@ -1,0 +1,28 @@
+**Bug bounty journey**
+
+XML External Entities(XXE)
+	WHAT IS?
+	
+	Applications those parse XML Inputs
+	XML Input containing a reference to an external entity is processed by a weakly configured XML parser
+	XXE may lead to disclosure of *sensitive data, SSRF, Port Scanning, DOS or RCE*
+
+Why XXE Happens?
+
+/Incorrect processing on SML input and parsing/
+
+
+What can be achieved by XXE?
+	- XXE may lead to disclosure of
+		Sensitive data (/etc/passwd)
+		SSRF (Hit a request to your collaborator /server)
+		Port Scanning (enumerate ips and ports)
+		DOS (Denial of Service)
+		RCE (Remote code Execution OOB)
+		
+
+How do we fix XXE issues?
+
+	Validate or escape tainted data within the system identifier in the DTD.
+	The safest way to prevemt XXE is always to disable DTDs(External Entities) Completely.
+	Depending on the parser, disable DTD's
