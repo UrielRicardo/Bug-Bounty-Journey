@@ -1,0 +1,37 @@
+**Bug bounty journey**
+
+Broken Access Control(BAC)
+
+	WHAT IS?
+
+	Restricted users access not properly handled.
+		example:
+			There is a login portal for school having 3 access levels.
+			1Student, 2.Teacher, 3.Principal
+			
+			Student should access and manage his own attendance,
+			Teacher should be allowed to see/modify students data
+			Principal should have access to teacher and students data
+		If access controll is not configured, students is able to modify others and teacher data also.
+		
+		
+Why BAC Happens?
+	*Due to lack of effective Access Control between 2 roles*
+	*Best Example in Bankin Sector is Maker and Checker roles*
+		if maker is able to bypass checker's funcionality, then its a Flaw
+		
+		
+
+What can be achieved by BAC?
+	Horizontal Escalation - user to user
+	Vertical Escalation - user to admin / admin to super admin
+	Cross Origin Resource Sharing
+	Access to API with missing access control for POST, PUT AND DELETE
+	Allowing Primary key to view/edit/modify/change someones data
+	Metadata manipulation such as replaying JWT access control tokens
+	
+How do we fix BAC issues?
+	Implement Strong Access Control Mechanism
+	Only Effective if enforced in trust server side code or server less API
+	Tokens, Auth should be invalidated as soon as logout
+	Decisions should not be made by plain coockies param like user=admin, access=super admin, roles=tiktoker
