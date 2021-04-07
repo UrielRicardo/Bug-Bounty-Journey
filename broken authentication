@@ -1,0 +1,36 @@
+**Bug bounty journey**
+
+Broken Authentication
+
+WHAT IS?
+
+- OTP Bypass
+- Captcha Bypass
+- Common Passwords Bruteforce
+- 2FA Bypass
+
+Why BA Happens?	
+	* Manipulated response is interpreted by the application
+	* No Rate Limit
+	* Lack of session Management
+	
+What can be achieved by BA?
+
+- Temporary Access to Users account(TATO)
+- Permanent Access to Users account(PATO)
+- Attackers can modify and alter the user details
+- Accounts can be used for malicious purposes to conduct attacks
+
+
+How do we fix BA issues?
+
+	*Usage of Strong Auth*
+		JWT, SAML, OAuth
+		input validation
+	
+	*Do not allow defaults or weaks creds*
+
+	*Rate limit*
+		using safe interfaces
+		
+	Usage of Server side secure session management that generates /High entropy secure sessions/
