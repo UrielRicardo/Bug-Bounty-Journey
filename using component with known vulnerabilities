@@ -1,0 +1,25 @@
+**Bug bounty journey**
+
+Using Component with Known Vulnerabilities
+	What is?
+		if you do not know the version of all components you use, this may lead to severe issues
+		Vulnerable System, application, software, protocol running leads to these type of attack
+		Outdated softwares, zero days vulnerabilities.
+
+Why UCWKV Happens?
+	Old softwares running which are outdated or contains vulns
+	Insecure/Obsolet features enabled or installed
+	eg: Vulnerable version of Dropbear SSH running Leads to SSH takeover
+	eg: Vulnerable version of Win7 will lead to Double Pulsar Exploitation
+	
+What can be achieved by UCWKV?
+	RCE
+	Malware Injections
+	Server Injections
+	Complete Takeover of the server
+	
+	
+How do we fix UCWKV issues?
+	UPDATE, UPDATE, UPDATE before going live.
+	Update all software and applications
+	Disable all unnecessary functions
