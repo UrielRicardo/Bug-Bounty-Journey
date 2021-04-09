@@ -1,0 +1,25 @@
+**Bug bounty journey**
+
+Security Missconfiguration
+	What is?
+	Usage of default Creds
+	Attackers often tend to attack unpatched flaws
+	Misconfigures webservers or DNS Configurations
+	Misconfigured Access Control
+	
+
+Why SM Happens?
+	Unnecessary features enabled or installed
+	The security settins in app servers(Struts, Spring, ASP.net)libraries, DB etc. not set to secure
+	
+What can be achieved by SM?
+	Account takeovers
+	RCE
+	Malware Injections
+	Email Spoofing(missconfigured TXT DNS severs)
+	Server injection
+	
+How do we fix SM issues?
+	Never keep the default configurations and go live.
+	Update all software and applications
+	Disable all unnecessary Functions
