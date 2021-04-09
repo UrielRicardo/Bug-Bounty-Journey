@@ -1,0 +1,35 @@
+**Bug bounty journey**
+
+Cross Site Scripting(XSS)
+	The attack allows attacker to execute javascript 
+	
+	There are 3 types of xss
+		- Reflected XSS
+		- Stored XSS
+		- DOM XSS
+		
+			RXSS: The application includes invalidated ou unescaped users input as part of HTML Output, which can be used further for ATO's
+			This attack, allows attacker to execute js in victims browser and hijack the session cookie leading to ATO.
+			
+			SXSS: Which is later viewed by another user or admin. (Vertical ATO)
+			
+			DXSS: Client side attack, where untrusted input is passed in source and comes out os sink and executes.
+	
+	
+Why XSS Happens?
+
+	No sanitization or escaping
+	Input is directly taken as the HTML output
+	Bad coding practices
+	
+What can be achieved by XXS?
+	Account takeovers
+	Keyloggers
+	Redirection
+	And a lot more.
+	
+	
+How do we fix XSS issues?
+	input sanitization
+	Escaping and Encoding
+	WAF
