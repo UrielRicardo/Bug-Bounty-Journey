@@ -1,0 +1,27 @@
+**Bug bounty journey**
+
+Insecure Deserialization
+
+	What is?
+		Application those serialise hostile or tampered object by attacker
+		When an application serialises and deserialise the data based on input without checking it properly may lead RCE
+		
+Why ID Happens?
+
+	Accept serialized objects from untrusted source and deserialize it.
+	
+What can be achieved by ID?
+	RCE
+	Sensitive files disclosure(/etc/passwd)
+	
+	
+How do we fix ID issues?
+
+	Best way is not to accept serialized objects from untrusted sources
+	Integrity checks for serialized objects to prevendt hostile object creation or data tampering
+	Logging deserialization exceptions and failures, such as where the incoming type is not the expected type, or the serialization throws exceptions.
+
+
+
+
+
